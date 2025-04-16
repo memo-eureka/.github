@@ -1,0 +1,42 @@
+name: "🎨 디자인 변경"
+description: "UI/UX 관련 변경 또는 개선 사항을 제안합니다."
+title: "[Design] "
+labels: ["design"]
+assignees: []
+
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: ✨ 변경 요약
+      description: 어떤 디자인 요소를 어떻게 바꾸고 싶은지 간단히 적어주세요.
+      placeholder: |
+        예) 툴바 배경 색을 흰색에서 파란색으로 변경하고 싶어요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 💡 변경 이유
+      description: 이 변경이 필요한 이유를 적어주세요.
+      placeholder: |
+        예) 기존 색상이 배경과 구분이 안 돼 가독성이 떨어졌습니다.
+    validations:
+      required: false
+
+  - type: input
+    id: mockup
+    attributes:
+      label: 🎨 참고 이미지/링크 (선택)
+      description: 디자인 참고할 이미지, 피그마 링크, 레퍼런스 등을 적어주세요.
+      placeholder: https://...
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 📋 체크리스트
+      options:
+        - label: 변경할 요소를 충분히 검토했습니다.
+        - label: 변경 후 다른 화면에 영향이 있는지 확인했습니다.
+        - label: 피그마 등 시안이 있는 경우 첨부했습니다.
