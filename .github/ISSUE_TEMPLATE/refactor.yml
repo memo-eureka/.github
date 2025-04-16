@@ -1,0 +1,39 @@
+name: 🧹 리팩토링 or 기술 개선
+description: 코드 정리나 구조 개선 작업
+title: "[Refactor] "
+labels: ["refactor"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ 목적  
+        성능 향상, 가독성 개선, 중복 제거 등 리팩토링 목적을 작성해주세요.
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 목적
+      description: 예) 가독성 개선, 성능 최적화, 유지보수성 향상 등
+      placeholder: 예) 중복된 로직 제거 및 공통 유틸로 분리
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: task-list
+    attributes:
+      label: 작업 내용
+      description: 구체적인 리팩토링 항목을 체크리스트로 작성해주세요.
+      options:
+        - label: 중복된 ViewModel 로직 분리
+        - label: FlatBlockAdapter 로직 정리
+
+  - type: textarea
+    id: test-plan
+    attributes:
+      label: 테스트 계획
+      description: 리팩토링 후 어떻게 테스트할 계획인지 적어주세요.
+      placeholder: 예) 기존 기능 정상 동작 확인 / 단위 테스트 통과 여부 등
+    validations:
+      required: false
