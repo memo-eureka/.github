@@ -1,0 +1,43 @@
+name: ✨ 기능 요청 (Feature)
+description: 새로운 기능을 추가하고 싶을 때 사용하세요.
+title: "[Feature] "
+labels: ["feature"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📌 기능 설명  
+        어떤 기능을 추가하고 싶은지 명확하게 작성해주세요.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: 기능 설명
+      description: "예: 메모 공유 기능 추가, 플로팅 입력창에 음성 인식 버튼 추가"
+      placeholder: |
+        - 예: 메모 공유 기능 추가  
+        - 예: 플로팅 입력창에 음성 인식 버튼 추가
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: task-list
+    attributes:
+      label: 작업 항목
+      description: 필요한 작업 단계를 체크리스트로 구성해주세요.
+      options:
+        - label: UI 구성
+        - label: ViewModel 수정
+        - label: DB 연동
+        - label: 테스트
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: 참고 자료 (선택)
+      description: 레퍼런스 링크나 이미지, 관련 문서를 남겨주세요.
+      placeholder: 예) 피그마 링크, 경쟁 서비스 스크린샷 등
+    validations:
+      required: false
