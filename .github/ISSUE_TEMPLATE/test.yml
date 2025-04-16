@@ -1,0 +1,23 @@
+name: 테스트 작업
+description: 단위 테스트, QA 등 테스트용 이슈
+title: "[Test] "
+labels: ["test"]
+body:
+  - type: textarea
+    attributes:
+      label: 테스트 목적
+      description: 어떤 기능이나 흐름을 테스트하는지 작성해 주세요.
+      placeholder: 예) 회원가입 유효성 검사
+
+  - type: checkboxes
+    attributes:
+      label: 테스트 항목
+      options:
+        - label: 정상 동작 확인
+        - label: 예외 처리 확인
+        - label: UI 렌더링/성능 확인
+
+  - type: input
+    attributes:
+      label: 관련 이슈 (optional)
+      placeholder: 예) #123
