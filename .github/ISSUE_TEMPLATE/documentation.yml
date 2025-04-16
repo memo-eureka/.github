@@ -1,0 +1,20 @@
+name: 문서 작성
+description: README, 개발 문서, 사용자 가이드 등 문서 작업
+title: "[Docs] "
+labels: ["documentation"]
+body:
+  - type: input
+    attributes:
+      label: 작성할 문서 제목
+      placeholder: 예) API 사용 가이드, 설치 매뉴얼 등
+
+  - type: textarea
+    attributes:
+      label: 문서 목적
+      description: 해당 문서의 대상자와 용도를 간단히 설명해주세요.
+      placeholder: 예) 외부 사용자에게 API를 안내하기 위해
+
+  - type: textarea
+    attributes:
+      label: 포함될 내용 개요
+      placeholder: 예) 기능 소개, 예제 코드, 주의 사항 등
