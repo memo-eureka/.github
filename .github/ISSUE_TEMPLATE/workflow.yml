@@ -1,0 +1,48 @@
+name: ⚙️ 워크플로 자동화 요청
+description: GitHub Actions, gh CLI, 자동화 스크립트 관련 요청이나 개선사항을 제안해주세요.
+title: "[Workflow] "
+labels: ["workflow"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ 워크플로 개선이나 추가 요청을 작성해주세요
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 어떤 작업을 자동화하고 싶나요?
+      description: |
+        예: 이슈 생성 시 자동으로 프로젝트에 등록하고 우선순위 설정
+      placeholder: |
+        예시:
+        - 이슈 생성 시 'workflow' 라벨 자동 추가
+        - 브랜치 생성 시 'In Progress'로 상태 전환
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-problem
+    attributes:
+      label: 현재 어떤 불편함이나 반복 작업이 있나요?
+      description: 현재 수동으로 반복하고 있는 작업이나 느린 부분이 있다면 적어주세요.
+      placeholder: |
+        예시:
+        - 이슈 생성 후 수동으로 라벨 붙임
+        - 프로젝트 필드 업데이트가 귀찮음
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 자동화 우선순위
+      description: 얼마나 빨리 필요하신가요?
+      options:
+        - 🟢 낮음 (편하면 좋음)
+        - 🟡 중간 (가끔 불편함)
+        - 🔴 높음 (매우 자주 반복 중)
+    validations:
+      required: false
