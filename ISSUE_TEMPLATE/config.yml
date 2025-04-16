@@ -9,4 +9,4 @@ issue_templates:
 
   - name: 🐞 버그 리포트
     description: 앱 또는 기능에서 발생한 문제를 제보해주세요.
-    file: bug.yaml
+    file: bug.yml
