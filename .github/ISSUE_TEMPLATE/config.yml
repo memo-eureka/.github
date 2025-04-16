@@ -4,9 +4,3 @@ contact_links:
   - name: 💬 일반 질문 또는 피드백
     url: https://github.com/ysndy/eureka_android/discussions
     about: 질문이나 건의는 Discussions 탭에 작성해주세요.
-
-issue_templates:
-
-  - name: 🐞 버그 리포트
-    description: 앱 또는 기능에서 발생한 문제를 제보해주세요.
-    file: bug.yml
