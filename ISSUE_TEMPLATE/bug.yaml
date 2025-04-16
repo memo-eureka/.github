@@ -1,0 +1,53 @@
+name: 🐞 버그 리포트 (Bug)
+description: 예상과 다르게 작동하는 부분이 있다면 제보해주세요.
+title: "[Bug] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚨 버그 설명  
+        무슨 문제가 발생했는지, 어떤 상황에서 재현되는지 적어주세요.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 버그 설명
+      description: 예: 플로팅 버튼이 오른쪽에 붙어 있을 때 화면 밖으로 나감
+      placeholder: 어떤 상황에서 어떤 문제가 발생했나요?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 방법
+      description: 어떤 단계를 거치면 이 문제가 재현되는지 알려주세요.
+      placeholder: |
+        1. 앱 실행  
+        2. 플로팅 버튼을 오른쪽으로 이동  
+        3. 버튼 클릭 시 UI 깨짐
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 스크린샷 (선택)
+      description: 가능하다면 스크린샷을 첨부해주세요 (드래그해서 첨부 가능)
+      placeholder: 스크린샷을 여기에 붙여넣거나 드래그하세요
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 환경 정보
+      description: 사용하는 기기, OS, 앱 버전 등의 정보를 알려주세요
+      placeholder: |
+        - 기기: Galaxy S22, Android 13  
+        - 앱 버전: v1.0.0
+    validations:
+      required: false
