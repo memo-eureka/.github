@@ -1,7 +1,7 @@
 name: "\U0001F4A1 기능 개선"
 description: 기존 기능을 개선하거나 사용자 경험을 향상시키는 이슈를 제안할 때 사용합니다.
 title: "[Enhancement] "
-labels: ["enhancement", "feature"]
+labels: ["enhancement"]
 body:
   - type: textarea
     id: current-behavior
