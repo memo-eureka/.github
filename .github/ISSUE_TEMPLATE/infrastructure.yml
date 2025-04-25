@@ -1,0 +1,81 @@
+name: ⚙️ 인프라 개선 요청
+description: CI/CD, 모니터링, 품질 관리 등 인프라 관련 요청사항을 등록해주세요.
+title: "[Infra] "
+labels: ["infra"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🛠️ 인프라 작업 제안서
+        예시 작업:
+        - GitHub Actions 설정
+        - SonarQube 도입
+        - 배포 자동화
+        - 테스트 커버리지 측정
+        - Slack/Email 알림 연결
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: "🎯 작업 목적 및 기대 효과"
+      description: "이 작업이 필요한 이유와 기대하는 효과를 작성해주세요."
+      placeholder: |
+        예시:
+        - 코드 품질 자동화 관리
+        - 배포 속도 개선
+        - 테스트 알림 자동화
+
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: "📌 적용 범위"
+      description: "어떤 프로젝트, 서비스, 모듈에 적용되는 작업인가요?"
+      placeholder: |
+        예시:
+        - 백엔드 모놀리식 저장소
+        - 안드로이드 앱 전체
+        - 공통 설정 (모든 CI 파이프라인에 적용)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "❗ 현재 불편한 점"
+      description: "현재 반복되거나 자동화가 필요한 지점이 있다면 적어주세요."
+      placeholder: |
+        예시:
+        - 테스트 실패해도 알림이 없음
+        - PR마다 수동으로 라벨을 붙임
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "🧭 작업 우선순위"
+      description: "이 작업이 얼마나 시급한가요?"
+      options:
+        - 🟢 낮음 (편하면 좋음)
+        - 🟡 중간 (가끔 불편함)
+        - 🔴 높음 (매우 자주 반복 중)
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: "📎 참고사항"
+      description: "스크립트 링크, 관련 이슈, 외부 문서 등이 있다면 공유해주세요."
+      placeholder: |
+        예시:
+        - 참고 스크립트: `.github/workflows/test.yml`
+        - 유사 이슈: #123
+        - SonarQube 설치 가이드 링크
+    validations:
+      required: false
