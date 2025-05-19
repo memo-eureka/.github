@@ -1,12 +1,50 @@
-## Hi there 👋
+# 프로젝트 구조도
+```mermaid
+graph TD
 
-<!--
+subgraph Android
+    A1[Eureka Android App]
+end
 
-**Here are some ideas to get you started:**
+subgraph iOS
+    A2[Eureka iOS App]
+end
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+subgraph Chrome
+    A3[Eureka Chrome Extension]
+end
+
+subgraph Web
+    A4[Eureka Web App]
+end
+
+subgraph Landing
+    A5[Eureka Landing Page]
+end
+
+subgraph Server
+    B1[Eureka Spring Boot Server]
+end
+
+subgraph DB
+    C1[(PostgreSQL - dev)]
+    C2[(PostgreSQL - prod)]
+end
+
+%% Connections
+A1 -->|dev| B1
+A2 -->|dev| B1
+A3 -->|dev| B1
+A4 -->|dev| B1
+
+B1 -->|dev| C1
+B1 -->|prod| C2
+
+%% Prod path example
+A1 -->|prod| B1
+A2 -->|prod| B1
+A4 -->|prod| B1
+
+%% Landing page is static
+A5 -->|static site| GitHub_Pages
+```
