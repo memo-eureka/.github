@@ -1,21 +1,33 @@
 # 프로젝트 구조도
 ```mermaid
-graph TD
+graph LR
 
 subgraph Android
-    A1[Eureka Android App]
+    subgraph A1["Eureka Android App"]
+        A1_1[dev]
+        A1_2[prod]
+    end
 end
 
 subgraph iOS
-    A2[Eureka iOS App]
+    subgraph A2[Eureka iOS App]
+        A2_1[dev]
+        A2_2[prod]
+    end
 end
 
 subgraph Chrome
-    A3[Eureka Chrome Extension]
+    subgraph A3[Eureka Chrome Extension]
+        A3_1[dev]
+        A3_2[prod]
+    end
 end
 
 subgraph Web
-    A4[Eureka Web App]
+    subgraph A4[Eureka Web App]
+        A4_1[dev]
+        A4_2[prod]
+    end
 end
 
 subgraph Landing
@@ -23,27 +35,30 @@ subgraph Landing
 end
 
 subgraph Server
-    B1[Eureka Spring Boot Server]
+    subgraph B1[Eureka Spring Boot Server]
+        subgraph B1_1[dev]
+            B1_1_1[h2 mem db]
+        end
+        B1_2[prod]
+    end
 end
 
 subgraph DB
-    C1[(PostgreSQL - dev)]
-    C2[(PostgreSQL - prod)]
+    C1[(PostgreSQL - prod)]
 end
 
 %% Connections
-A1 -->|dev| B1
-A2 -->|dev| B1
-A3 -->|dev| B1
-A4 -->|dev| B1
+A1_1 --> B1_1
+A2_1 --> B1_1
+A3_1 --> B1_1
+A4_1 --> B1_1
 
-B1 -->|dev| C1
-B1 -->|prod| C2
+B1_2 --> C1
 
 %% Prod path example
-A1 -->|prod| B1
-A2 -->|prod| B1
-A4 -->|prod| B1
+A1_2 --> B1_2
+A2_2 --> B1_2
+A4_2 --> B1_2
 
 %% Landing page is static
 A5 -->|static site| GitHub_Pages
